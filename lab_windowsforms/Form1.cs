@@ -62,5 +62,25 @@ namespace lab_windowsforms
         {
 
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            // Acrescentar os valores em variáveis
+            string nome = this.txtNome.Text;
+            string endereco = this.txtEndereco.Text;
+            string dtNascimento  = this.dtpNasc.Text;
+            string cpf = txtCPF.Text;
+            string telefone = txtTelefone.Text;
+            string genero = cmbGenero.Text;
+
+            MessageBox.Show($"Nome: {nome} \n" +
+                            $"Endereço: {endereco}\n " +
+                            $"Nascimento: {dtNascimento}\n" +
+                            $"CPF: {cpf}\n" +
+                            $"Telefone: {telefone}\n" +
+                            $"Gênero: {genero}\n");
+        }
+
+        
     }
 }
