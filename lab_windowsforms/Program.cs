@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lab_windowsforms.classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,15 +9,28 @@ namespace lab_windowsforms
 {
     internal static class Program
     {
-        /// <summary>
-        /// Ponto de entrada principal para o aplicativo.
-        /// </summary>
+        // <summary>
+        // Ponto de entrada principal para o aplicativo.
+        // </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+
+            frmLogin telaLogin = new frmLogin();
+
+            if (telaLogin.ShowDialog() == DialogResult.OK)
+            {
+                login usuarioLogado = telaLogin.usuarioEncontrado;
+
+                Application.Run(new FrmMenuPrincipal(usuarioLogado));
+            }
+            else
+            {
+                Application.Exit();
+            }
+
         }
     }
 }

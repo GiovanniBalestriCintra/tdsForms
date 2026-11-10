@@ -14,6 +14,8 @@ namespace lab_windowsforms
     public partial class frmLogin : Form
     {
         List<login> usuarios = new List<login>();
+        public login usuarioEncontrado;
+
 
         public frmLogin()
         {
@@ -23,9 +25,9 @@ namespace lab_windowsforms
         private void frmLogin_Load(object sender, EventArgs e)       {
 
 
-            login user1 = new login(1, "Arthur Silva", "adm01@gmail.com", "adm123", "Administrador");
-            login user2 = new login(1, "Luan Bispo", "operador2@gmail.com", "123quatro", "Operador");
-            login user3 = new login(1, "Amanda Costa", "operador3@gmail.com", "um2três", "Operador");
+            login user1 = new login(1, "Daniel", "adm01@gmail.com", "adm01", "Administrador");
+            login user2 = new login(1, "Erick", "operador2@gmail.com", "adm03", "Operador");
+            login user3 = new login(1, "Vinicios", "operador3@gmail.com", "adm02", "Operador");
 
             usuarios.Add(user1);
             usuarios.Add(user2);
@@ -69,7 +71,7 @@ namespace lab_windowsforms
 
              // NO FINAL DO BTN  DEPOIS DAS VALIDAÇÕES
 
-            login usuarioEncontrado = usuarios.FirstOrDefault(
+            usuarioEncontrado = usuarios.FirstOrDefault(
                 usuario => usuario.autenticar(textoLogin,textoSenha)
             );
 
@@ -85,9 +87,8 @@ namespace lab_windowsforms
             {
                 MessageBox.Show($"Bem-vindo, {usuarioEncontrado.Nome}");
 
-                this.Hide();
-                FrmMenuPrincipal frmMenu = new FrmMenuPrincipal(usuarioEncontrado);
-                frmMenu.Show();
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
         }
 
@@ -101,5 +102,7 @@ namespace lab_windowsforms
             
             this.txtLogin.BackColor = Color.White;
         }
+
+      
     }
 }
