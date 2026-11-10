@@ -23,16 +23,13 @@ namespace lab_windowsforms
         private void frmLogin_Load(object sender, EventArgs e)       {
 
 
-            login user1 = new login(1, "adm01@gmail.com", "adm123", "Administrador");
-            login user2 = new login(1, "operador2@gmail.com", "123quatro", "Operador");
-            login user3 = new login(1, "operador3@gmail.com", "um2três", "Operador");
+            login user1 = new login(1, "Arthur Silva", "adm01@gmail.com", "adm123", "Administrador");
+            login user2 = new login(1, "Luan Bispo", "operador2@gmail.com", "123quatro", "Operador");
+            login user3 = new login(1, "Amanda Costa", "operador3@gmail.com", "um2três", "Operador");
 
             usuarios.Add(user1);
             usuarios.Add(user2);
             usuarios.Add(user3);
-
-
-
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -83,6 +80,12 @@ namespace lab_windowsforms
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                 );
+            }
+            else
+            {
+                MessageBox.Show($"Bem-vindo, {usuarioEncontrado.Nome}");
+                FrmMenuPrincipal frmMenu = new FrmMenuPrincipal(usuarioEncontrado);
+                frmMenu.Show();
             }
         }
 

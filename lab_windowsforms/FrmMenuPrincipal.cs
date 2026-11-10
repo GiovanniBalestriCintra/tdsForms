@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lab_windowsforms.classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace lab_windowsforms
 {
     public partial class FrmMenuPrincipal : Form
     {
-        public FrmMenuPrincipal()
+        public FrmMenuPrincipal(login usuarioAutenticado)
         {
+            // NÃO MEXER NESTA FUNÇÃO PELO AMOR DE DEUS
             InitializeComponent();
+
+            this.strFuncionario.Text = usuarioAutenticado.Nome;
+            this.strFuncao.Text = usuarioAutenticado.UserProfile;
         }
 
         private void ajudaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -26,6 +31,11 @@ namespace lab_windowsforms
         {
             Form1 form1 = new Form1();
             form1.ShowDialog();
+        }
+
+        private void FrmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

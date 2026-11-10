@@ -69,14 +69,14 @@
             // pessoaFísicaToolStripMenuItem
             // 
             this.pessoaFísicaToolStripMenuItem.Name = "pessoaFísicaToolStripMenuItem";
-            this.pessoaFísicaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pessoaFísicaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.pessoaFísicaToolStripMenuItem.Text = "Pessoa Física";
             this.pessoaFísicaToolStripMenuItem.Click += new System.EventHandler(this.pessoaFísicaToolStripMenuItem_Click);
             // 
             // pessoaJuridicaToolStripMenuItem
             // 
             this.pessoaJuridicaToolStripMenuItem.Name = "pessoaJuridicaToolStripMenuItem";
-            this.pessoaJuridicaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pessoaJuridicaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.pessoaJuridicaToolStripMenuItem.Text = "Pessoa Juridica";
             // 
             // relatóriosToolStripMenuItem
@@ -92,19 +92,19 @@
             // vendasToolStripMenuItem
             // 
             this.vendasToolStripMenuItem.Name = "vendasToolStripMenuItem";
-            this.vendasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vendasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.vendasToolStripMenuItem.Text = "Vendas";
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.produtosToolStripMenuItem.Text = "Produtos";
             // 
             // ajudaToolStripMenuItem
@@ -153,6 +153,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMenuPrincipal";
             this.Text = "FrmMenuPrincipal";
+            this.Load += new System.EventHandler(this.FrmMenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
