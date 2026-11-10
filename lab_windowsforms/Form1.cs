@@ -81,6 +81,6 @@ namespace lab_windowsforms
                             $"Gênero: {genero}\n");
         }
 
-        
+      
     }
 }
