@@ -84,6 +84,8 @@ namespace lab_windowsforms
             else
             {
                 MessageBox.Show($"Bem-vindo, {usuarioEncontrado.Nome}");
+
+                this.Hide();
                 FrmMenuPrincipal frmMenu = new FrmMenuPrincipal(usuarioEncontrado);
                 frmMenu.Show();
             }
